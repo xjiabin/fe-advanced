@@ -30,26 +30,26 @@ function DFS2(node) {
   return nodes
 }
 
+// 非递归
 function DFS(node) {
+  const stack = []
   const nodeList = []
 
-  function traversal(node) {
-    if (node != null) {
-      // 保存当前节点
-      nodeList.push(node)
-      const child = node.children
-      // 遍历子节点
-      for (let i = 0, len = child.length; i < len; i++) {
-        traversal(child[i])
+  if (node) {
+    stack.push(node)
+    while (stack.length) {
+      const item = stack.pop()
+      nodeList.push(item)
+      const children = item.children
+
+      for (let i = children.length - 1; i >= 0; i--) {
+        stack.push(children[i])
       }
     }
   }
 
-  traversal(node)
-
   return nodeList
 }
-
 
 //  广度优先遍历
 function BFS1(node) {

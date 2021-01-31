@@ -17,7 +17,8 @@ module.exports = [
   {
     title: '编程题',
     children: [
-      '/question/code/01'
+      '/question/code/01',
+      '/question/code/02'
     ]
   }
 ]
