@@ -13,5 +13,11 @@ module.exports = [
       '/question/js/02',
       '/question/js/03'
     ]
+  },
+  {
+    title: '编程题',
+    children: [
+      '/question/code/01'
+    ]
   }
 ]
