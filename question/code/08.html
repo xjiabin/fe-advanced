@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>下面代码中 a 在什么情况下会打印 1？ | 前端进阶</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    
+    <meta name="description" content="记录前端知识点与面试题">
+    
+    <link rel="preload" href="/fe-advanced/assets/css/0.styles.f120cec9.css" as="style"><link rel="preload" href="/fe-advanced/assets/js/app.6c12c602.js" as="script"><link rel="preload" href="/fe-advanced/assets/js/2.0e50e020.js" as="script"><link rel="preload" href="/fe-advanced/assets/js/21.81902157.js" as="script"><link rel="prefetch" href="/fe-advanced/assets/js/10.b5a7a94d.js"><link rel="prefetch" href="/fe-advanced/assets/js/11.5e245bd2.js"><link rel="prefetch" href="/fe-advanced/assets/js/12.46649d77.js"><link rel="prefetch" href="/fe-advanced/assets/js/13.16fef9a4.js"><link rel="prefetch" href="/fe-advanced/assets/js/14.c4aac510.js"><link rel="prefetch" href="/fe-advanced/assets/js/15.b465b534.js"><link rel="prefetch" href="/fe-advanced/assets/js/16.5dcefb6c.js"><link rel="prefetch" href="/fe-advanced/assets/js/17.3b3c6dc2.js"><link rel="prefetch" href="/fe-advanced/assets/js/18.1c099140.js"><link rel="prefetch" href="/fe-advanced/assets/js/19.2f386777.js"><link rel="prefetch" href="/fe-advanced/assets/js/20.3f460e22.js"><link rel="prefetch" href="/fe-advanced/assets/js/22.5d08a000.js"><link rel="prefetch" href="/fe-advanced/assets/js/23.ec069796.js"><link rel="prefetch" href="/fe-advanced/assets/js/24.7c630c20.js"><link rel="prefetch" href="/fe-advanced/assets/js/25.0f909d47.js"><link rel="prefetch" href="/fe-advanced/assets/js/26.4b76b0f5.js"><link rel="prefetch" href="/fe-advanced/assets/js/27.b87064c4.js"><link rel="prefetch" href="/fe-advanced/assets/js/28.171d1724.js"><link rel="prefetch" href="/fe-advanced/assets/js/3.1837ba79.js"><link rel="prefetch" href="/fe-advanced/assets/js/4.865692a8.js"><link rel="prefetch" href="/fe-advanced/assets/js/5.81254301.js"><link rel="prefetch" href="/fe-advanced/assets/js/6.6e8c67be.js"><link rel="prefetch" href="/fe-advanced/assets/js/7.fec0ecd5.js"><link rel="prefetch" href="/fe-advanced/assets/js/8.e766bc1a.js"><link rel="prefetch" href="/fe-advanced/assets/js/9.4fdaf5de.js">
+    <link rel="stylesheet" href="/fe-advanced/assets/css/0.styles.f120cec9.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/fe-advanced/" class="home-link router-link-active"><!----> <span class="site-name">前端进阶</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/fe-advanced/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/fe-advanced/blog/" class="nav-link">
+  进阶·博文
+</a></div><div class="nav-item"><a href="/fe-advanced/question/" class="nav-link router-link-active">
+  每日一题
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/fe-advanced/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/fe-advanced/blog/" class="nav-link">
+  进阶·博文
+</a></div><div class="nav-item"><a href="/fe-advanced/question/" class="nav-link router-link-active">
+  每日一题
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JS 基础</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>编程题</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/fe-advanced/question/code/01.html" class="sidebar-link">介绍下深度优先遍历和广度优先遍历，如何实现？</a></li><li><a href="/fe-advanced/question/code/02.html" class="sidebar-link">请分别用深度优先思想和广度优先思想实现一个拷贝函数？</a></li><li><a href="/fe-advanced/question/code/03.html" class="sidebar-link">手写算法题</a></li><li><a href="/fe-advanced/question/code/04.html" class="sidebar-link">如何实现一个 new</a></li><li><a href="/fe-advanced/question/code/05.html" class="sidebar-link">两个数组合并成一个数组</a></li><li><a href="/fe-advanced/question/code/06.html" class="sidebar-link">改造下面的代码，使之输出 0 - 9，写出你能想到的所有解法</a></li><li><a href="/fe-advanced/question/code/07.html" class="sidebar-link">使用迭代的方式实现 flatten 函数。</a></li><li><a href="/fe-advanced/question/code/08.html" aria-current="page" class="active sidebar-link">下面代码中 a 在什么情况下会打印 1？</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/fe-advanced/question/code/08.html#重写对象的-tostring-方法" class="sidebar-link">重写对象的 toString 方法</a></li><li class="sidebar-sub-header"><a href="/fe-advanced/question/code/08.html#数组特性" class="sidebar-link">数组特性</a></li></ul></li><li><a href="/fe-advanced/question/code/09.html" class="sidebar-link">实现一个 Sleep 函数</a></li><li><a href="/fe-advanced/question/code/10.html" class="sidebar-link">实现 (5).add(3).minus(2) 功能。</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="下面代码中-a-在什么情况下会打印-1"><a href="#下面代码中-a-在什么情况下会打印-1" class="header-anchor">#</a> 下面代码中 a 在什么情况下会打印 1？</h1> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token operator">?</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>a <span class="token operator">==</span> <span class="token number">1</span> <span class="token operator">&amp;&amp;</span> a <span class="token operator">==</span> <span class="token number">2</span> <span class="token operator">&amp;&amp;</span> a <span class="token operator">==</span> <span class="token number">3</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="重写对象的-tostring-方法"><a href="#重写对象的-tostring-方法" class="header-anchor">#</a> 重写对象的 toString 方法</h2> <p>因为 <code>==</code> 会被进行隐式类型的转换，所以可以重写 toString 方法</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token punctuation">{</span>
+  i<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> a<span class="token punctuation">.</span>i<span class="token operator">++</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">(</span>a <span class="token operator">==</span> <span class="token number">1</span> <span class="token operator">&amp;&amp;</span> a <span class="token operator">==</span> <span class="token number">2</span> <span class="token operator">&amp;&amp;</span> a <span class="token operator">==</span> <span class="token number">3</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="数组特性"><a href="#数组特性" class="header-anchor">#</a> 数组特性</h2> <p>数组也是对象，在隐式转换时会调用 <code>toString</code> 方法</p> <blockquote><p>对于数组对象，toString 方法返回一个字符串，该字符串由数组中的每个元素的 toString() 返回值经调用 join() 方法连接（由逗号隔开）组成。</p></blockquote> <p>可以看到数组在调用 toString 方法的时候会调用 join 方法，所以在这里可以把 join 方法重写为数组的 shift 方法，每次返回第一个数组元素</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span>
+a<span class="token punctuation">.</span>join <span class="token operator">=</span> a<span class="token punctuation">.</span>shift
+
+<span class="token keyword">if</span> <span class="token punctuation">(</span>a <span class="token operator">==</span> <span class="token number">1</span> <span class="token operator">&amp;&amp;</span> a <span class="token operator">==</span> <span class="token number">2</span> <span class="token operator">&amp;&amp;</span> a <span class="token operator">==</span> <span class="token number">3</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/fe-advanced/question/code/07.html" class="prev">
+        使用迭代的方式实现 flatten 函数。
+      </a></span> <span class="next"><a href="/fe-advanced/question/code/09.html">
+        实现一个 Sleep 函数
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/fe-advanced/assets/js/app.6c12c602.js" defer></script><script src="/fe-advanced/assets/js/2.0e50e020.js" defer></script><script src="/fe-advanced/assets/js/21.81902157.js" defer></script>
+  </body>
+</html>
