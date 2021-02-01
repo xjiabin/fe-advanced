@@ -9,7 +9,7 @@ module.exports = {
     nav: [
       { text: 'Home', link: '/' },
       { text: '进阶·博文', link: '/blog/' },
-      { text: '每日一题', link: '/question/' },
+      { text: '每日一题', link: '/question/' }
     ],
     sidebar: {
       '/blog/': blog,
