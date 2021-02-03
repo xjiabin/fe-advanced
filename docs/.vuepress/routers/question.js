@@ -23,7 +23,8 @@ module.exports = [
       '/question/code/08',
       '/question/code/09',
       '/question/code/10',
-      '/question/code/11'
+      '/question/code/11',
+      '/question/code/12'
     ]
   }
 ]
