@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>给定两个数组，写一个方法来计算它们的交集。 | 前端进阶</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    
+    <meta name="description" content="记录前端知识点与面试题">
+    
+    <link rel="preload" href="/fe-advanced/assets/css/0.styles.f120cec9.css" as="style"><link rel="preload" href="/fe-advanced/assets/js/app.257e1ce3.js" as="script"><link rel="preload" href="/fe-advanced/assets/js/2.0e50e020.js" as="script"><link rel="preload" href="/fe-advanced/assets/js/27.c9ac39d9.js" as="script"><link rel="prefetch" href="/fe-advanced/assets/js/10.b5a7a94d.js"><link rel="prefetch" href="/fe-advanced/assets/js/11.5e245bd2.js"><link rel="prefetch" href="/fe-advanced/assets/js/12.46649d77.js"><link rel="prefetch" href="/fe-advanced/assets/js/13.16fef9a4.js"><link rel="prefetch" href="/fe-advanced/assets/js/14.c4aac510.js"><link rel="prefetch" href="/fe-advanced/assets/js/15.af58b754.js"><link rel="prefetch" href="/fe-advanced/assets/js/16.5dcefb6c.js"><link rel="prefetch" href="/fe-advanced/assets/js/17.3b3c6dc2.js"><link rel="prefetch" href="/fe-advanced/assets/js/18.1c099140.js"><link rel="prefetch" href="/fe-advanced/assets/js/19.2f386777.js"><link rel="prefetch" href="/fe-advanced/assets/js/20.3f460e22.js"><link rel="prefetch" href="/fe-advanced/assets/js/21.81902157.js"><link rel="prefetch" href="/fe-advanced/assets/js/22.5d08a000.js"><link rel="prefetch" href="/fe-advanced/assets/js/23.ec069796.js"><link rel="prefetch" href="/fe-advanced/assets/js/24.bf502cc0.js"><link rel="prefetch" href="/fe-advanced/assets/js/25.7e2220fc.js"><link rel="prefetch" href="/fe-advanced/assets/js/26.b46c0373.js"><link rel="prefetch" href="/fe-advanced/assets/js/28.232bef58.js"><link rel="prefetch" href="/fe-advanced/assets/js/29.9e9322f3.js"><link rel="prefetch" href="/fe-advanced/assets/js/3.57109bf0.js"><link rel="prefetch" href="/fe-advanced/assets/js/30.c293feef.js"><link rel="prefetch" href="/fe-advanced/assets/js/31.828096b2.js"><link rel="prefetch" href="/fe-advanced/assets/js/32.694910be.js"><link rel="prefetch" href="/fe-advanced/assets/js/4.865692a8.js"><link rel="prefetch" href="/fe-advanced/assets/js/5.81254301.js"><link rel="prefetch" href="/fe-advanced/assets/js/6.6e8c67be.js"><link rel="prefetch" href="/fe-advanced/assets/js/7.fec0ecd5.js"><link rel="prefetch" href="/fe-advanced/assets/js/8.e766bc1a.js"><link rel="prefetch" href="/fe-advanced/assets/js/9.4fdaf5de.js">
+    <link rel="stylesheet" href="/fe-advanced/assets/css/0.styles.f120cec9.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/fe-advanced/" class="home-link router-link-active"><!----> <span class="site-name">前端进阶</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/fe-advanced/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/fe-advanced/blog/" class="nav-link">
+  进阶·博文
+</a></div><div class="nav-item"><a href="/fe-advanced/question/" class="nav-link router-link-active">
+  每日一题
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/fe-advanced/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/fe-advanced/blog/" class="nav-link">
+  进阶·博文
+</a></div><div class="nav-item"><a href="/fe-advanced/question/" class="nav-link router-link-active">
+  每日一题
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JS 基础</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>编程题</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/fe-advanced/question/code/01.html" class="sidebar-link">介绍下深度优先遍历和广度优先遍历，如何实现？</a></li><li><a href="/fe-advanced/question/code/02.html" class="sidebar-link">请分别用深度优先思想和广度优先思想实现一个拷贝函数？</a></li><li><a href="/fe-advanced/question/code/03.html" class="sidebar-link">手写算法题</a></li><li><a href="/fe-advanced/question/code/04.html" class="sidebar-link">如何实现一个 new</a></li><li><a href="/fe-advanced/question/code/05.html" class="sidebar-link">两个数组合并成一个数组</a></li><li><a href="/fe-advanced/question/code/06.html" class="sidebar-link">改造下面的代码，使之输出 0 - 9，写出你能想到的所有解法</a></li><li><a href="/fe-advanced/question/code/07.html" class="sidebar-link">使用迭代的方式实现 flatten 函数。</a></li><li><a href="/fe-advanced/question/code/08.html" class="sidebar-link">下面代码中 a 在什么情况下会打印 1？</a></li><li><a href="/fe-advanced/question/code/09.html" class="sidebar-link">实现一个 Sleep 函数</a></li><li><a href="/fe-advanced/question/code/10.html" class="sidebar-link">实现 (5).add(3).minus(2) 功能。</a></li><li><a href="/fe-advanced/question/code/11.html" class="sidebar-link">冒泡排序如何实现，时间复杂度是多少， 还可以如何改进？</a></li><li><a href="/fe-advanced/question/code/12.html" class="sidebar-link">某公司 1 到 12 月份的销售额存在一个对象里面</a></li><li><a href="/fe-advanced/question/code/13.html" class="sidebar-link">要求设计 LazyMan 类，实现以下功能。</a></li><li><a href="/fe-advanced/question/code/14.html" aria-current="page" class="active sidebar-link">给定两个数组，写一个方法来计算它们的交集。</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/fe-advanced/question/code/14.html#求两个数组的交集" class="sidebar-link">求两个数组的交集</a></li><li class="sidebar-sub-header"><a href="/fe-advanced/question/code/14.html#求两个数组的最长公共子序列" class="sidebar-link">求两个数组的最长公共子序列</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="给定两个数组-写一个方法来计算它们的交集。"><a href="#给定两个数组-写一个方法来计算它们的交集。" class="header-anchor">#</a> 给定两个数组，写一个方法来计算它们的交集。</h1> <h2 id="求两个数组的交集"><a href="#求两个数组的交集" class="header-anchor">#</a> 求两个数组的交集</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token function-variable function">intersect</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">arr1<span class="token punctuation">,</span> arr2</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+  <span class="token operator">...</span><span class="token keyword">new</span> <span class="token class-name">Set</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token operator">...</span>arr1<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">v</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> arr2<span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>v<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">]</span>
+
+<span class="token keyword">var</span> arr2 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span>
+<span class="token keyword">var</span> arr1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">intersect</span><span class="token punctuation">(</span>arr1<span class="token punctuation">,</span> arr2<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// [1]</span>
+</code></pre></div><h2 id="求两个数组的最长公共子序列"><a href="#求两个数组的最长公共子序列" class="header-anchor">#</a> 求两个数组的最长公共子序列</h2> <ul><li>空间换时间</li></ul> <p>用个 Hash 表来存数组 1 的元素以及出现的个数（此处需要遍历 n 次，并存一个 n 级别的空间）。
+遍历数组 2，发现数组 2 里有 Hash 表里的值就存到 Result 数组里，并把 Hash 表内该值次数减一（为 0 之后就 Delete）。
+如果不存在 Hash 表里，就跳过。这样时间复杂度就是(m+n)</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token function-variable function">getIntersection</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">arr1<span class="token punctuation">,</span> arr2</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> maps <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  <span class="token keyword">const</span> result <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+
+  <span class="token comment">// 存储数组 arr1 的元素以及出现的个数</span>
+  arr1<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">num</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 存在，数量加1</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>maps<span class="token punctuation">[</span>num<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      maps<span class="token punctuation">[</span>num<span class="token punctuation">]</span> <span class="token operator">+=</span> <span class="token number">1</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      maps<span class="token punctuation">[</span>num<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+  <span class="token comment">// 遍历数组2</span>
+  arr2<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">num</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 如果 num 存在于 Hash 表里就存到 Result 数组里</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>maps<span class="token punctuation">[</span>num<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      result<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span>
+      maps<span class="token punctuation">[</span>num<span class="token punctuation">]</span> <span class="token operator">-=</span> <span class="token number">1</span>
+      <span class="token comment">// 个数未为 0 就删除</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>maps<span class="token punctuation">[</span>num<span class="token punctuation">]</span> <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">delete</span> maps<span class="token punctuation">[</span>num<span class="token punctuation">]</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+  <span class="token keyword">return</span> result
+<span class="token punctuation">}</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">getIntersection</span><span class="token punctuation">(</span>arr1<span class="token punctuation">,</span> arr2<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// [1]</span>
+</code></pre></div><ul><li>不使用额外空间</li></ul> <p>不用额外空间，就用遍历 arr1 的时候，判断值在不在 arr2 里，如果在，把 arr2 里的该值 push 到 Result 数组里，并将该值从 arr2 数组里删掉（用 splice）。这样就是不用额外空间，但是提高了时间复杂度。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token function-variable function">getIntersection2</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">arr1<span class="token punctuation">,</span> arr2</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> result <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+
+  arr1<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">num</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> idx <span class="token operator">=</span> arr2<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>idx <span class="token operator">&gt;=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      result<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span>
+      arr2<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span>idx<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token keyword">return</span> result
+<span class="token punctuation">}</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">getIntersection2</span><span class="token punctuation">(</span>arr1<span class="token punctuation">,</span> arr2<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// [1]</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/fe-advanced/question/code/13.html" class="prev">
+        要求设计 LazyMan 类，实现以下功能。
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/fe-advanced/assets/js/app.257e1ce3.js" defer></script><script src="/fe-advanced/assets/js/2.0e50e020.js" defer></script><script src="/fe-advanced/assets/js/27.c9ac39d9.js" defer></script>
+  </body>
+</html>

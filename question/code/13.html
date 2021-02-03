@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>要求设计 LazyMan 类，实现以下功能。 | 前端进阶</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    
+    <meta name="description" content="记录前端知识点与面试题">
+    
+    <link rel="preload" href="/fe-advanced/assets/css/0.styles.f120cec9.css" as="style"><link rel="preload" href="/fe-advanced/assets/js/app.257e1ce3.js" as="script"><link rel="preload" href="/fe-advanced/assets/js/2.0e50e020.js" as="script"><link rel="preload" href="/fe-advanced/assets/js/26.b46c0373.js" as="script"><link rel="prefetch" href="/fe-advanced/assets/js/10.b5a7a94d.js"><link rel="prefetch" href="/fe-advanced/assets/js/11.5e245bd2.js"><link rel="prefetch" href="/fe-advanced/assets/js/12.46649d77.js"><link rel="prefetch" href="/fe-advanced/assets/js/13.16fef9a4.js"><link rel="prefetch" href="/fe-advanced/assets/js/14.c4aac510.js"><link rel="prefetch" href="/fe-advanced/assets/js/15.af58b754.js"><link rel="prefetch" href="/fe-advanced/assets/js/16.5dcefb6c.js"><link rel="prefetch" href="/fe-advanced/assets/js/17.3b3c6dc2.js"><link rel="prefetch" href="/fe-advanced/assets/js/18.1c099140.js"><link rel="prefetch" href="/fe-advanced/assets/js/19.2f386777.js"><link rel="prefetch" href="/fe-advanced/assets/js/20.3f460e22.js"><link rel="prefetch" href="/fe-advanced/assets/js/21.81902157.js"><link rel="prefetch" href="/fe-advanced/assets/js/22.5d08a000.js"><link rel="prefetch" href="/fe-advanced/assets/js/23.ec069796.js"><link rel="prefetch" href="/fe-advanced/assets/js/24.bf502cc0.js"><link rel="prefetch" href="/fe-advanced/assets/js/25.7e2220fc.js"><link rel="prefetch" href="/fe-advanced/assets/js/27.c9ac39d9.js"><link rel="prefetch" href="/fe-advanced/assets/js/28.232bef58.js"><link rel="prefetch" href="/fe-advanced/assets/js/29.9e9322f3.js"><link rel="prefetch" href="/fe-advanced/assets/js/3.57109bf0.js"><link rel="prefetch" href="/fe-advanced/assets/js/30.c293feef.js"><link rel="prefetch" href="/fe-advanced/assets/js/31.828096b2.js"><link rel="prefetch" href="/fe-advanced/assets/js/32.694910be.js"><link rel="prefetch" href="/fe-advanced/assets/js/4.865692a8.js"><link rel="prefetch" href="/fe-advanced/assets/js/5.81254301.js"><link rel="prefetch" href="/fe-advanced/assets/js/6.6e8c67be.js"><link rel="prefetch" href="/fe-advanced/assets/js/7.fec0ecd5.js"><link rel="prefetch" href="/fe-advanced/assets/js/8.e766bc1a.js"><link rel="prefetch" href="/fe-advanced/assets/js/9.4fdaf5de.js">
+    <link rel="stylesheet" href="/fe-advanced/assets/css/0.styles.f120cec9.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/fe-advanced/" class="home-link router-link-active"><!----> <span class="site-name">前端进阶</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/fe-advanced/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/fe-advanced/blog/" class="nav-link">
+  进阶·博文
+</a></div><div class="nav-item"><a href="/fe-advanced/question/" class="nav-link router-link-active">
+  每日一题
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/fe-advanced/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/fe-advanced/blog/" class="nav-link">
+  进阶·博文
+</a></div><div class="nav-item"><a href="/fe-advanced/question/" class="nav-link router-link-active">
+  每日一题
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JS 基础</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>编程题</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/fe-advanced/question/code/01.html" class="sidebar-link">介绍下深度优先遍历和广度优先遍历，如何实现？</a></li><li><a href="/fe-advanced/question/code/02.html" class="sidebar-link">请分别用深度优先思想和广度优先思想实现一个拷贝函数？</a></li><li><a href="/fe-advanced/question/code/03.html" class="sidebar-link">手写算法题</a></li><li><a href="/fe-advanced/question/code/04.html" class="sidebar-link">如何实现一个 new</a></li><li><a href="/fe-advanced/question/code/05.html" class="sidebar-link">两个数组合并成一个数组</a></li><li><a href="/fe-advanced/question/code/06.html" class="sidebar-link">改造下面的代码，使之输出 0 - 9，写出你能想到的所有解法</a></li><li><a href="/fe-advanced/question/code/07.html" class="sidebar-link">使用迭代的方式实现 flatten 函数。</a></li><li><a href="/fe-advanced/question/code/08.html" class="sidebar-link">下面代码中 a 在什么情况下会打印 1？</a></li><li><a href="/fe-advanced/question/code/09.html" class="sidebar-link">实现一个 Sleep 函数</a></li><li><a href="/fe-advanced/question/code/10.html" class="sidebar-link">实现 (5).add(3).minus(2) 功能。</a></li><li><a href="/fe-advanced/question/code/11.html" class="sidebar-link">冒泡排序如何实现，时间复杂度是多少， 还可以如何改进？</a></li><li><a href="/fe-advanced/question/code/12.html" class="sidebar-link">某公司 1 到 12 月份的销售额存在一个对象里面</a></li><li><a href="/fe-advanced/question/code/13.html" aria-current="page" class="active sidebar-link">要求设计 LazyMan 类，实现以下功能。</a></li><li><a href="/fe-advanced/question/code/14.html" class="sidebar-link">给定两个数组，写一个方法来计算它们的交集。</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="要求设计-lazyman-类-实现以下功能。"><a href="#要求设计-lazyman-类-实现以下功能。" class="header-anchor">#</a> 要求设计 LazyMan 类，实现以下功能。</h1> <blockquote><p>这个问题的关键问题是 js 的事件队列问题。</p></blockquote> <div class="language-js extra-class"><pre class="language-js"><code><span class="token function">LazyMan</span><span class="token punctuation">(</span><span class="token string">'Tony'</span><span class="token punctuation">)</span>
+<span class="token comment">// Hi I am Tony</span>
+
+<span class="token function">LazyMan</span><span class="token punctuation">(</span><span class="token string">'Tony'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">sleep</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">eat</span><span class="token punctuation">(</span><span class="token string">'lunch'</span><span class="token punctuation">)</span>
+<span class="token comment">// Hi I am Tony</span>
+<span class="token comment">// 等待了10秒...</span>
+<span class="token comment">// I am eating lunch</span>
+
+<span class="token function">LazyMan</span><span class="token punctuation">(</span><span class="token string">'Tony'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">eat</span><span class="token punctuation">(</span><span class="token string">'lunch'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">sleep</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">eat</span><span class="token punctuation">(</span><span class="token string">'dinner'</span><span class="token punctuation">)</span>
+<span class="token comment">// Hi I am Tony</span>
+<span class="token comment">// I am eating lunch</span>
+<span class="token comment">// 等待了10秒...</span>
+<span class="token comment">// I am eating diner</span>
+
+<span class="token function">LazyMan</span><span class="token punctuation">(</span><span class="token string">'Tony'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">eat</span><span class="token punctuation">(</span><span class="token string">'lunch'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">eat</span><span class="token punctuation">(</span><span class="token string">'dinner'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">sleepFirst</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">sleep</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">eat</span><span class="token punctuation">(</span><span class="token string">'junk food'</span><span class="token punctuation">)</span>
+<span class="token comment">// Hi I am Tony</span>
+<span class="token comment">// 等待了5秒...</span>
+<span class="token comment">// I am eating lunch</span>
+<span class="token comment">// I am eating dinner</span>
+<span class="token comment">// 等待了10秒...</span>
+<span class="token comment">// I am eating junk food</span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">class</span> <span class="token class-name">LazyManClass</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">name</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name
+    <span class="token keyword">this</span><span class="token punctuation">.</span>taskList <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Hi I am </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+    <span class="token comment">// 使用 setTimeout 将 next 的调用改为异步，以达到 lazy 的目的</span>
+    <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">sleepFirst</span><span class="token punctuation">(</span><span class="token parameter">time</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token function-variable function">task</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">等待了</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>time<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">秒</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span> time <span class="token operator">*</span> <span class="token number">1000</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>taskList<span class="token punctuation">.</span><span class="token function">unshift</span><span class="token punctuation">(</span>task<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">eat</span><span class="token punctuation">(</span><span class="token parameter">food</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token function-variable function">task</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">I am eating </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>food<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>taskList<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>task<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">sleep</span><span class="token punctuation">(</span><span class="token parameter">time</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token function-variable function">task</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">等待了</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>time<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">秒</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span> time <span class="token operator">*</span> <span class="token number">1000</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>taskList<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>task<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 取出第一个任务执行</span>
+    <span class="token keyword">const</span> task <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>taskList<span class="token punctuation">.</span><span class="token function">shift</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    task <span class="token operator">&amp;&amp;</span> <span class="token function">task</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">LazyMan</span><span class="token punctuation">(</span><span class="token parameter">name</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">LazyManClass</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// LazyMan('Tony')</span>
+<span class="token comment">// Hi I am Tony</span>
+
+<span class="token comment">// LazyMan('Tony')</span>
+<span class="token comment">//   .sleep(10)</span>
+<span class="token comment">//   .eat('lunch')</span>
+<span class="token comment">// Hi I am Tony</span>
+<span class="token comment">// 等待了10秒...</span>
+<span class="token comment">// I am eating lunch</span>
+
+<span class="token comment">// LazyMan('Tony')</span>
+<span class="token comment">//   .eat('lunch')</span>
+<span class="token comment">//   .sleep(10)</span>
+<span class="token comment">//   .eat('dinner')</span>
+<span class="token comment">// Hi I am Tony</span>
+<span class="token comment">// I am eating lunch</span>
+<span class="token comment">// 等待了10秒...</span>
+<span class="token comment">// I am eating diner</span>
+
+<span class="token function">LazyMan</span><span class="token punctuation">(</span><span class="token string">'Tony'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">eat</span><span class="token punctuation">(</span><span class="token string">'lunch'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">eat</span><span class="token punctuation">(</span><span class="token string">'dinner'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">sleepFirst</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">sleep</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">eat</span><span class="token punctuation">(</span><span class="token string">'junk food'</span><span class="token punctuation">)</span>
+<span class="token comment">// Hi I am Tony</span>
+<span class="token comment">// 等待了5秒...</span>
+<span class="token comment">// I am eating lunch</span>
+<span class="token comment">// I am eating dinner</span>
+<span class="token comment">// 等待了10秒...</span>
+<span class="token comment">// I am eating junk food</span>
+</code></pre></div><p>在 constructor 中，next() 方法执行在 setTimeout 中，setTimeout 是一个异步任务，因为异步的关系，在 setTimeout 回调函数没有被执行的时候，链式调用已经结束了，taskList 也把所有的 task 存好了，随后在所有同步代码执行完成之后开始执行异步代码；由于每个 task 中又手动调用了一次 next() 方法，所以能一直把所有任务都执行完成。</p> <p>如果把 next() 方法中的 <code>task &amp;&amp; task()</code> 注释掉，打印 taskList 的内容的话，就可以会发现 taskList 中已经存好了所有链式调用的任务了</p> <div class="language-bash extra-class"><pre class="language-bash"><code>Hi I am Tony
+
+<span class="token operator">&gt;</span> <span class="token punctuation">[</span>ƒ, ƒ, ƒ, ƒ<span class="token punctuation">]</span>
+  <span class="token number">0</span>: <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>…<span class="token punctuation">}</span>
+  <span class="token number">1</span>: <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>…<span class="token punctuation">}</span>
+  <span class="token number">2</span>: <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>…<span class="token punctuation">}</span>
+  <span class="token number">3</span>: <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>…<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/fe-advanced/question/code/12.html" class="prev">
+        某公司 1 到 12 月份的销售额存在一个对象里面
+      </a></span> <span class="next"><a href="/fe-advanced/question/code/14.html">
+        给定两个数组，写一个方法来计算它们的交集。
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/fe-advanced/assets/js/app.257e1ce3.js" defer></script><script src="/fe-advanced/assets/js/2.0e50e020.js" defer></script><script src="/fe-advanced/assets/js/26.b46c0373.js" defer></script>
+  </body>
+</html>
